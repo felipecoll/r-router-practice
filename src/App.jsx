@@ -9,6 +9,8 @@ import Menu from './pages/Menu'
 import Logout from './pages/Logout'
 import { AuthProvider, AuthRoute } from './auth/auth'
 import './App.css'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 function App() {
   
@@ -16,7 +18,7 @@ function App() {
     <>
      <HashRouter>
       <AuthProvider>
-      <Menu />
+       <Menu /> 
           <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/contact" element={<Contact />} />
@@ -32,7 +34,8 @@ function App() {
               <Route path="/*" element={<h1>NOT FOUND!</h1>} />
           </Routes>
         </AuthProvider>
-     </HashRouter>
+      </HashRouter>
+     
     </>
   )
 }
